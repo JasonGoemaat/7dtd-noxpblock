@@ -1,0 +1,30 @@
+<configs>
+  <append xpath="/blocks">
+    <block name="noXp">
+      <property name="Material" value="MstoneNoGlue"/>
+      <property name="MaxDamage" value="50000"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="Entities/OutdoorDecor/bricksStackPrefab"/>
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+      <property name="FilterTags" value="MC_building,SC_construction,SC_decor"/>
+      <drop event="Harvest" name="resourceRockSmall" count="50" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+      <property name="BuffsWhenWalkedOn" value="buffNoXpAOE"/>
+      <property class="RepairItems">
+        <property name="resourceRockSmall" value="5"/>
+      </property>
+      <property name="DescriptionKey" value="noXpDesc"/>
+      <property name="EconomicValue" value="5"/>
+      <property name="EconomicBundleSize" value="1"/>
+      <property name="SellableToTrader" value="false"/>
+      <property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+      <property name="SortOrder1" value="70i0"/>
+      <property name="CustomIcon" value="campfire"/>
+      <property name="CustomIconTint" value="ff8080"/>
+      <property name="CustomTint" value="ff8080"/>
+      <property name="Stacknumber" value="1000"/>
+    </block>
+  </append>
+</configs>

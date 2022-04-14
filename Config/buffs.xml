@@ -1,0 +1,19 @@
+<configs>
+  <append xpath="/buffs">
+    <buff name="buffNoXpAOE" hidden="true" icon_color="255,128,128">
+      <stack_type value="ignore"/>
+      <duration value=".1"/>
+      <!-- without the 2nd buff the buff display will flicker -->
+      <effect_group>
+        <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNoXpAOEEffect"/>
+      </effect_group>
+    </buff>
+    <buff name="buffNoXpAOEEffect" name_key="buffNoXpAOEEffectName" description_key="buffNoXpAOEEffectDesc" icon="ui_game_symbol_campfire" icon_color="255,128,128">
+      <stack_type value="replace"/>
+      <duration value="2"/>
+      <effect_group>
+        <passive_effect name="PlayerExpGain" operation="base_set" value="0.0"/>
+      </effect_group>
+    </buff>
+  </append>
+</configs>
